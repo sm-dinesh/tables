@@ -27,6 +27,8 @@ class Table extends ViewComponent
 
     protected string $viewIdentifier = 'table';
 
+    protected bool $isCustomTable = false;
+
     public const LOADING_TARGETS = ['previousPage', 'nextPage', 'gotoPage', 'sortTable', 'tableFilters', 'resetTableFiltersForm', 'tableSearchQuery', 'tableColumnSearchQueries', 'tableRecordsPerPage'];
 
     final public function __construct(HasTable $livewire)
@@ -467,5 +469,9 @@ class Table extends ViewComponent
     public function hasColumnSearches(): bool
     {
         return $this->getLivewire()->hasTableColumnSearches();
+    }
+    public function isCustomTable(): bool
+    {
+        return $this->isCustomTable;
     }
 }

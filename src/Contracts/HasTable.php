@@ -104,4 +104,6 @@ interface HasTable extends HasForms
     public function isTableLoaded(): bool;
 
     public function hasTableColumnSearches(): bool;
+
+    public function isCustomTable(): bool;
 }

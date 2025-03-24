@@ -38,6 +38,8 @@
     $records = $isLoaded ? $getRecords() : null;
     $allSelectableRecordsCount = $isLoaded ? $getAllSelectableRecordsCount() : null;
     $columnsCount = count($columns);
+    $isCustomTableble = $isCustomTable();
+    dd($isCustomTable);
 
     if (count($actions) && (! $isReordering)) {
         $columnsCount++;
